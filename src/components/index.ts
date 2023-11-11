@@ -1,3 +1,4 @@
 export * from './button'
 export * from './header'
-export * from './layout'
+export * from './rootLayout'
+export * from './heading'
