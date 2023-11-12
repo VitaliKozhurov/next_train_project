@@ -1,8 +1,8 @@
 import { CharacterType } from '@/assets'
-import { NavBar } from '@/components'
 import Image from 'next/image'
 
 import s from './Character.module.scss'
+
 type Props = CharacterType
 export const Character = ({ image, name }: Props) => {
   return (

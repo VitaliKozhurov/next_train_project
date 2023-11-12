@@ -1,6 +1,7 @@
 import { useCharacters } from '@/assets'
 import { HeadMeta, getLayout } from '@/components'
 import { Character } from '@components/character'
+import Link from 'next/link'
 
 const Characters = () => {
   const characters = useCharacters()
@@ -9,7 +10,12 @@ const Characters = () => {
     <>
       <HeadMeta title={'Characters'} />
       <h1>Characters Page</h1>
-      {characters && characters.map(character => <Character key={character.id} {...character} />)}
+      {characters &&
+        characters.map(character => (
+          <Link href={`/characters/${character.id}`} key={character.id}>
+            <Character {...character} />
+          </Link>
+        ))}
     </>
   )
 }
