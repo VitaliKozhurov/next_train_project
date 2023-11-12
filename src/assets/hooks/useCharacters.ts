@@ -17,7 +17,7 @@ export const useCharacters = (): CharacterType[] | null => {
 
   useEffect(() => {
     axios
-      .get<GetCharactersResponse>('https://rickandmortyapi.com/api/character')
+      .get<GetCharactersResponse>(`${process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL}/character`)
       .then(res => setCharacters(res.data.results))
   }, [])
 
