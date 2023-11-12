@@ -1,17 +1,22 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren, ReactElement, ReactNode } from 'react'
 
-import { Header } from '@/components'
+import { Header, NavBar } from '@/components'
 import { inter } from '@/fonts'
+import { NextPage } from 'next'
 
 type Props = {
   children: ReactNode
 }
 
-export const RootLayout = ({ children }: Props) => {
+const RootLayout: NextPage<PropsWithChildren<any>> = ({ children }) => {
   return (
-    <>
-      <Header />
-      <main className={inter.className}>{children}</main>
-    </>
+    <main className={inter.className}>
+      <NavBar />
+      {children}
+    </main>
   )
+}
+
+export const getLayout = (page: ReactElement) => {
+  return <RootLayout>{page}</RootLayout>
 }

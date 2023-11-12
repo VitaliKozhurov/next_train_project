@@ -1,4 +1,5 @@
 export * from './button'
 export * from './header'
 export * from './rootLayout'
-export * from './heading'
+export * from './headMeta'
+export * from './navBar'

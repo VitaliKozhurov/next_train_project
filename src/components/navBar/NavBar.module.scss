@@ -1,0 +1,17 @@
+.links {
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+
+  margin: 2rem 0;
+
+  font-size: 2rem;
+
+  & a {
+    color: var(--color-light-100);
+  }
+
+  & a:hover {
+    color: var(--color-accent-700);
+  }
+}
