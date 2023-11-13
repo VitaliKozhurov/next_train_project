@@ -1,4 +1,4 @@
-import { inter } from '@/fonts'
+import { inter } from '@/app'
 import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
