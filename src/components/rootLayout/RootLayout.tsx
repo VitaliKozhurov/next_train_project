@@ -1,7 +1,6 @@
 import { PropsWithChildren, ReactElement, ReactNode } from 'react'
 
-import { Header, NavBar } from '@/components'
-import { inter } from '@/fonts'
+import { NavBar } from '@/components'
 import { NextPage } from 'next'
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
 
 const RootLayout: NextPage<PropsWithChildren<any>> = ({ children }) => {
   return (
-    <main className={inter.className}>
+    <main>
       <NavBar />
       {children}
     </main>
