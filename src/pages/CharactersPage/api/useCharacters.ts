@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { CharacterType } from '@/entities/CharacterCard/model'
 import axios from 'axios'
-
-export type CharacterType = {
-  id: string
-  image: string
-  name: string
-}
 
 type GetCharactersResponse = {
   results: CharacterType[]

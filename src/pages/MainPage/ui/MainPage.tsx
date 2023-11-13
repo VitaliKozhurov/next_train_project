@@ -1,4 +1,4 @@
-import { HeadMeta, getLayout } from '@/components'
+import { HeadMeta, getLayout } from '@/shared'
 
 export const MainPage = () => {
   return (

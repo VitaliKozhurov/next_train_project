@@ -1,10 +1,11 @@
-import { CharacterType } from '@/assets'
 import Image from 'next/image'
 
-import s from './Character.module.scss'
+import s from './CharacterCard.module.scss'
+
+import { CharacterType } from '../model'
 
 type Props = CharacterType
-export const Character = ({ image, name }: Props) => {
+export const CharacterCard = ({ image, name }: Props) => {
   return (
     <div className={s.card}>
       <h2 className={s.cardTitle}>{name}</h2>

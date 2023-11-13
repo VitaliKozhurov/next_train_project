@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CharacterType } from '@/assets'
+import { CharacterType } from '@/entities'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
