@@ -1,1 +1,2 @@
-export { getLocations } from './getlocations'
+export { getLocations } from './getLocations'
+export { getLocationsForStaticProps } from './getLocations'

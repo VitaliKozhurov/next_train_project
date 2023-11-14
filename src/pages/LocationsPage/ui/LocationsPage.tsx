@@ -1,5 +1,5 @@
 import { GetLocationsList } from '@/features'
-import { HeadMeta, LocationType, getLayout } from '@/shared'
+import { HeadMeta, getLayout } from '@/shared'
 
 export const LocationsPage = () => {
   return (
