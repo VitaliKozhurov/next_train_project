@@ -1,10 +1,17 @@
+import { getLocations } from '@/features'
 import { LocationType } from '@/shared'
+import { useQuery } from '@tanstack/react-query'
 
-type Props = {
-  locations: LocationType[]
-}
+export const GetLocationsList = () => {
+  const { data: locations } = useQuery<LocationType[]>({
+    queryFn: getLocations,
+    queryKey: ['locations'],
+  })
 
-export const GetLocationsList = ({ locations }: Props) => {
+  if (!locations) {
+    return null
+  }
+
   return (
     <>
       {locations.map(location => (

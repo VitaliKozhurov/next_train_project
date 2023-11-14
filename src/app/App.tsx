@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 
-import type { ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode, useState } from 'react'
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import './index.scss'
 
@@ -14,7 +16,12 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const [queryClient] = useState(() => new QueryClient())
   const getLayout = Component.getLayout ?? (page => page)
 
-  return getLayout(<Component {...pageProps} />)
+  return getLayout(
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  )
 }
