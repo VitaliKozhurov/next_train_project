@@ -11,6 +11,12 @@ export const getEpisodes = async (params?: ParamsType) => {
     )
     const episodes = response.data.results
 
+    if (!episodes) {
+      return {
+        notFound: true,
+      }
+    }
+
     return {
       props: {
         episodes,
@@ -20,9 +26,7 @@ export const getEpisodes = async (params?: ParamsType) => {
     console.log(e)
 
     return {
-      props: {
-        episodes: [],
-      },
+      notFound: true,
     }
   }
 }

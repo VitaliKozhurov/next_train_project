@@ -1,5 +1,4 @@
-import { instanceRick } from '@/shared'
-import { CharacterType, RickResponseType } from '@shared/api/types'
+import { CharacterType, RickResponseType, instanceRick } from '@/shared'
 
 type ParamsType = {
   page: number
@@ -12,6 +11,12 @@ export const getCharacters = async (params?: ParamsType) => {
     })
     const characters = response.data.results
 
+    if (!characters) {
+      return {
+        notFound: true,
+      }
+    }
+
     return {
       props: {
         characters,
@@ -21,9 +26,7 @@ export const getCharacters = async (params?: ParamsType) => {
     console.log(e)
 
     return {
-      props: {
-        characters: [],
-      },
+      notFound: true,
     }
   }
 }
