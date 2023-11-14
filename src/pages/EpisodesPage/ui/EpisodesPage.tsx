@@ -1,16 +1,16 @@
-import { GetCharactersList } from '@/features'
-import { CharacterType, HeadMeta, getLayout } from '@/shared'
+import { GetEpisodesList } from '@/features'
+import { EpisodeType, HeadMeta, getLayout } from '@/shared'
 
-/*type Props = {
-    characters: CharacterType[]
-}*/
+type Props = {
+  episodes: EpisodeType[]
+}
 
-export const EpisodesPage = (/*{ characters }: Props*/) => {
+export const EpisodesPage = ({ episodes }: Props) => {
   return (
     <>
       <HeadMeta title={'Episodes Page'} />
       <h1>Episodes Page</h1>
-      {/* <GetCharactersList characters={characters} />*/}
+      <GetEpisodesList episodes={episodes} />
     </>
   )
 }

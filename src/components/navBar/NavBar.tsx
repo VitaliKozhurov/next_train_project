@@ -6,6 +6,7 @@ export const NavBar = () => {
     <nav className={s.links}>
       <Link href={'/'}>Main</Link>
       <Link href={'/characters'}>Characters</Link>
+      <Link href={'/episodes'}>Episodes</Link>
     </nav>
   )
 }

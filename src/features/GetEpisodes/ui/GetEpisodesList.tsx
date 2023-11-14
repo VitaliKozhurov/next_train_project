@@ -1,4 +1,4 @@
-import { EpisodeType } from '@shared/api/types'
+import { EpisodeType } from '@/shared'
 
 type Props = {
   episodes: EpisodeType[]
