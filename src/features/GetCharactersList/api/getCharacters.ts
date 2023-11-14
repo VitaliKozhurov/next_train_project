@@ -1,9 +1,10 @@
-import { CharacterType } from '@/entities'
 import { instanceRick } from '@/shared'
-type GetCharactersResponse = {
-  results: CharacterType[]
+import { CharacterType, RickResponseType } from '@shared/api/types'
+
+type ParamsType = {
+  page: number
 }
 
-export const getCharacters = () => {
-  return instanceRick.get<GetCharactersResponse>(`/character`)
+export const getCharacters = (params?: ParamsType) => {
+  return instanceRick.get<RickResponseType<CharacterType>>(`/character`, { params })
 }

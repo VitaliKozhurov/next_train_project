@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CharacterType } from '@/entities'
+import { CharacterType } from '@/shared'
 import { useRouter } from 'next/router'
 
 import { getCharacter } from '../api'

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CharacterType } from '@/entities'
+import { CharacterType } from '@/shared'
 
 import { getCharacters } from '../api'
 
