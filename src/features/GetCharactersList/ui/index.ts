@@ -1,0 +1,1 @@
+export { GetCharactersList } from './GetCharactersList'

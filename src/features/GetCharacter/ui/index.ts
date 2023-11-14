@@ -1,0 +1,1 @@
+export { GetCharacter } from './GetCharacter'

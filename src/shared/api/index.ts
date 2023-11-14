@@ -1,0 +1,1 @@
+export { instanceRick } from './instancesAxios'
