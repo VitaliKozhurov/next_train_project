@@ -1,5 +1,7 @@
+import { ReactElement } from 'react'
+
 import { GetLocationsList } from '@/features'
-import { HeadMeta, getLayout } from '@/shared'
+import { HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
 
 export const LocationsPage = () => {
   return (
@@ -11,4 +13,4 @@ export const LocationsPage = () => {
   )
 }
 
-LocationsPage.getLayout = getLayout
+LocationsPage.getLayout = (page: ReactElement) => getRootLayout(getAuthorizedLayout(page))

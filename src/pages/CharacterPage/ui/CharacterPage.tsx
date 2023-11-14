@@ -1,4 +1,6 @@
-import { HeadMeta, getLayout } from '@/shared'
+import { ReactElement } from 'react'
+
+import { HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
 import { GetCharacter } from '@features/GetCharacter'
 
 export const CharacterPage = () => {
@@ -11,4 +13,4 @@ export const CharacterPage = () => {
   )
 }
 
-CharacterPage.getLayout = getLayout
+CharacterPage.getLayout = (page: ReactElement) => getRootLayout(getAuthorizedLayout(page))

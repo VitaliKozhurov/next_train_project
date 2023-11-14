@@ -1,6 +1,7 @@
 .links {
   display: flex;
-  column-gap: 3rem;
+  flex-direction: column;
+  row-gap: 3rem;
   justify-content: center;
 
   margin: 2rem 0;

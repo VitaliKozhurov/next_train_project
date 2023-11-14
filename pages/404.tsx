@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { getLayout } from '@/components'
+import { getRootLayout } from '@/shared'
 import { useRouter } from 'next/router'
 
 const NotFoundPage = () => {
@@ -13,6 +13,6 @@ const NotFoundPage = () => {
   return <h1>PAGE NOT FOUND</h1>
 }
 
-NotFoundPage.getLayout = getLayout
+NotFoundPage.getLayout = getRootLayout
 
 export default NotFoundPage

@@ -1,4 +1,6 @@
-import { HeadMeta, getLayout } from '@/shared'
+import { ReactElement } from 'react'
+
+import { HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
 
 export const MainPage = () => {
   return (
@@ -9,4 +11,4 @@ export const MainPage = () => {
   )
 }
 
-MainPage.getLayout = getLayout
+MainPage.getLayout = (page: ReactElement) => getRootLayout(getAuthorizedLayout(page))

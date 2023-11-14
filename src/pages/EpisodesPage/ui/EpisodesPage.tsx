@@ -1,5 +1,7 @@
+import { ReactElement } from 'react'
+
 import { GetEpisodesList } from '@/features'
-import { EpisodeType, HeadMeta, getLayout } from '@/shared'
+import { EpisodeType, HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
 
 type Props = {
   episodes: EpisodeType[]
@@ -15,4 +17,4 @@ export const EpisodesPage = ({ episodes }: Props) => {
   )
 }
 
-EpisodesPage.getLayout = getLayout
+EpisodesPage.getLayout = (page: ReactElement) => getRootLayout(getAuthorizedLayout(page))
