@@ -18,6 +18,27 @@ export type CharacterType = {
   type: string
   url: string
 }
+
+export type LocationType = {
+  created: string
+  dimension: string
+  id: number
+  name: string
+  residents: string[]
+  type: string
+  url: string
+}
+
+export type EpisodeType = {
+  air_date: string
+  characters: string[]
+  created: string
+  episode: string
+  id: number
+  name: string
+  url: string
+}
+
 type InfoType = {
   count: number
   next: null | string
