@@ -1,4 +1,4 @@
-import { getRootLayout } from '@/shared'
+import { getRootLayout } from '../../Layout'
 
 export const SignUpPage = () => {
   return (

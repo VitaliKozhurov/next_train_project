@@ -1,1 +1,1 @@
-export { getCharacter } from './getCharacter'
+export { getCharacter, getCharactersPaths } from './getCharacter'

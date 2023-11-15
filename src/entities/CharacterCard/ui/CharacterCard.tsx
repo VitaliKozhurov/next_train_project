@@ -1,8 +1,7 @@
+import { CharacterType } from '@/shared'
 import Image from 'next/image'
 
 import s from './CharacterCard.module.scss'
-
-import { CharacterType } from '../model'
 
 type Props = CharacterType
 export const CharacterCard = ({ image, name }: Props) => {
