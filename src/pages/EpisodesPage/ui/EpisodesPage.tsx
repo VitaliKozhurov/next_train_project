@@ -1,7 +1,9 @@
 import { ReactElement } from 'react'
 
 import { GetEpisodesList } from '@/features'
-import { EpisodeType, HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
+import { EpisodeType, HeadMeta } from '@/shared'
+
+import { getAuthorizedLayout, getRootLayout } from '../../Layout'
 
 type Props = {
   episodes: EpisodeType[]
@@ -11,8 +13,10 @@ export const EpisodesPage = ({ episodes }: Props) => {
   return (
     <>
       <HeadMeta title={'Episodes Page'} />
-      <h1>Episodes Page</h1>
-      <GetEpisodesList episodes={episodes} />
+      <div>
+        <h1>Episodes Page</h1>
+        <GetEpisodesList episodes={episodes} />
+      </div>
     </>
   )
 }

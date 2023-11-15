@@ -1,7 +1,9 @@
 import { ReactElement } from 'react'
 
 import { GetCharactersList } from '@/features'
-import { CharacterType, HeadMeta, getAuthorizedLayout, getRootLayout } from '@/shared'
+import { CharacterType, HeadMeta } from '@/shared'
+
+import { getAuthorizedLayout, getRootLayout } from '../../Layout'
 
 type Props = {
   characters: CharacterType[]
