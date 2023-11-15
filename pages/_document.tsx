@@ -1,5 +1,5 @@
-import { inter } from '@/app'
 import { Head, Html, Main, NextScript } from 'next/document'
+import { inter } from 'src/application'
 
 export default function Document() {
   return (
